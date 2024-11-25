@@ -53,8 +53,13 @@
                     <fieldset>
                         <legend>Add a new product</legend>
                         <div class="mb-3">
-                            <label for="category_id" class="form-label">Category</label>
-                            <input type="text" class="form-control" id="category_id" name="category_id" required>
+                            <label for="category_name" class="form-label">Category</label>
+                            <!-- <input type="text" class="form-control" id="category_name" name="category_name" required> -->
+                             <select class="form-label" id="category_name" name="category_name" required>
+                                {% for category in categories %}
+                                <option value="{{category_name}}">{{category.name}}</option>
+                                {% endfor %}
+                             </select>
                         </div>
                         <div class="mb-3">
                             <label for="title" class="form-label">Title</label>
